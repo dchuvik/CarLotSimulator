@@ -9,6 +9,7 @@ namespace CarLotSimulator //Year, Make, Model, EngineNoise, HonkNoise, IsDriveab
         //Default Constructor
         public Car()
         {
+            Carlot.numberOfCars++;
         }
         //Custom Constructor
         public Car (int year, string make, string model, string engineNoise, string honkNoise, bool isDrivable)
