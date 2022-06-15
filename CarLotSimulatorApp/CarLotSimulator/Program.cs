@@ -23,7 +23,7 @@ namespace CarLotSimulator
             //*************BONUS*************//
 
             //Dot Notation
-            Car car1 = new Car();
+            Car car1 = new Car(); //<-------------------- Instantiation 1
             car1.Year = 2009;
             car1.Make = "Mazda";
             car1.Make = "CX-5";
@@ -33,8 +33,8 @@ namespace CarLotSimulator
 
             carLot.ParkingLot.Add(car1);
 
-            //Object Initializwer Syntax
-            var car2 = new Car()
+            //Object Initializer Syntax
+            var car2 = new Car() //<--------------------- Instantiation 2
             {
                 Year = 1999,
                 Make = "Ford",
@@ -43,7 +43,8 @@ namespace CarLotSimulator
                 HonkNoise = "*doesn't work*",
                 IsDriveable = true
             };
-            carLot.ParkingLot.Add(car2);
+
+            carLot.ParkingLot.Add(car2); //<------------- Instantiation  3
             //Custom Constructor
             Car car3 = new Car(1999, "Honda", "Accord", "Braaaaaaah", "Beeeeep", true);
 
@@ -61,7 +62,10 @@ namespace CarLotSimulator
                 Console.WriteLine($"{car.Year} {car.Make} {car.Model}");
                 car.MakeEngineNoise();
                 car.MakeHonkNoise();
+                Console.WriteLine($"Current Number of car: {++Carlot.numberOfCars}");
+                Console.WriteLine("-------------------------------");
                 Console.WriteLine();
+                
             }
         }
     }
